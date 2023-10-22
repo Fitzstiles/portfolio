@@ -3,6 +3,7 @@ import "./body.css";
 import { Link } from "react-router-dom";
 import WifiIcon from "@mui/icons-material/Wifi";
 import AppleIcon from "@mui/icons-material/Apple";
+import { day, dayInWords, month } from "../App";
 
 const Header = () => {
   return (
@@ -23,7 +24,9 @@ const Header = () => {
 
         <div className="left__section">
           <WifiIcon />
-          <p>Mon June 24</p>
+          <p>
+            {dayInWords} {month} {day}
+          </p>
           <Time />
         </div>
       </div>
