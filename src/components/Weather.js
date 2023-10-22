@@ -35,29 +35,6 @@ const Weather = () => {
     getWeather();
   }, []);
 
-  //
-  //
-  //
-  // Calender codes
-  // let days = ["Sun", "Mon", "Tue", "Wed", " Thur", "Fri", "Sat"];
-  // let months = [
-  //   "Jan",
-  //   "Feb",
-  //   "Mar",
-  //   "Apr",
-  //   "May",
-  //   "Jun",
-  //   "Jul",
-  //   "Aug",
-  //   "Sep",
-  //   "Oct",
-  //   "Nov",
-  //   "Dec",
-  // ];
-  // const d = new Date();
-  // const day = d.getDate();
-  // const dayInWords = days[d.getDay()];
-  // const month = months[d.getMonth()];
   return (
     <div className="weather__container">
       <div className="first__section__wrapper">

@@ -16,7 +16,9 @@ const Header = () => {
           <Link to="/about">About me</Link>
           <Link to="/about">Project</Link>
           <Link to="/about">Resume</Link>
-          <Link to="/about">Email</Link>
+          <a href="mailto:austinpaul606@gmail.com?subject=Hello from my portfolio">
+            Email
+          </a>
           <Link to="/about">Help</Link>
           <Link to="/about">Contact me</Link>
         </div>

@@ -4,7 +4,7 @@ import DesktopNav from "./navigation/DesktopNav";
 import MobileNav from "./navigation/MobileNav";
 
 const BottomNav = () => {
-  return width > 820 ? (
+  return width > 830 ? (
     <div>
       <DesktopNav />
     </div>
