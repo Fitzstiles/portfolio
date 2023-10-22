@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./body.css";
 import { useState } from "react";
-import { day, dayInWords, month } from "../App";
+import { day, dayInWords, month } from "./constant/DateTime";
 
 const Weather = () => {
   const [weatherData, setweatherData] = useState("");

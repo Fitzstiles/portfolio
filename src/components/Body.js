@@ -3,11 +3,11 @@ import BottomNav from "./BottomNav";
 import Weather from "./Weather";
 import Header from "./Header";
 import MobileView from "./MobileView";
+import { BrowserHeight } from "./constant/Height";
 
 const Body = () => {
   // Declared height to fix height for browser
-  const height = (window.innerHeight / 100) * 100;
-
+  const height = BrowserHeight();
   return (
     <div
       className="hero__container"
