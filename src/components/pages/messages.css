@@ -69,10 +69,9 @@
 }
 
 .right__messages {
-    align-content: end;
     margin-right: 10px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .right__messages p {
@@ -83,16 +82,6 @@
     border-radius: 10px;
     margin-top: 10px;
 }
-
-/* .button {
-    text-align: center;
-    width: 90%;
-    background-color: #4386F7;
-    margin: auto;
-    margin-top: 60px;
-    padding: 10px;
-    border-radius: 10px;
-} */
 
 .button {
     position: absolute;
@@ -105,4 +94,15 @@
     padding: 10px;
     text-align: center;
     border-radius: 10px;
+}
+
+@media screen and (min-width:1000px) {
+    .messages__container {
+        width: 60%;
+        margin: auto;
+    }
+
+    .button {
+        width: 40%;
+    }
 }

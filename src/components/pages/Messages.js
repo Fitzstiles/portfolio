@@ -1,9 +1,9 @@
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import VideocamOutlinedIcon from "@mui/icons-material/VideocamOutlined";
 import "./messages.css";
+
 import Rightmessages from "./Rightmessages";
 import Leftmessage from "../Leftmessage";
-import BottomNav from "../BottomNav";
 import { Link } from "react-router-dom";
 const Messages = () => {
   return (
