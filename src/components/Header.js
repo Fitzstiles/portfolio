@@ -19,8 +19,7 @@ const Header = () => {
           <a href="mailto:austinpaul606@gmail.com?subject=Hello from my portfolio">
             Email
           </a>
-          <Link to="/about">Help</Link>
-          <Link to="/about">Contact me</Link>
+          <Link to="/messages">Help</Link>
         </div>
         {/* the second part */}
 

@@ -1,0 +1,36 @@
+.preloader__container {
+    display: grid;
+    place-content: center;
+    background: #000;
+}
+
+.preloader__image {
+    width: 100px;
+    height: 100px;
+}
+
+.preloader__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.loading {
+    width: 100px;
+    height: 2px;
+    background-color: white;
+    transform-origin: left;
+    animation: loadingProgress 5s;
+    animation-timing-function: linear;
+}
+
+
+@keyframes loadingProgress {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100;
+    }
+}

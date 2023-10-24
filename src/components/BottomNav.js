@@ -1,8 +1,20 @@
 import "./bottomnav.css";
 import { Link } from "react-router-dom";
-import { BrowserWidth } from "./constant/Width";
+import { useEffect, useState } from "react";
+import { BrowserWidth } from "../components/constant/Width";
 
 const BottomNav = () => {
+  const [notify, setNotify] = useState(false);
+  useEffect(() => {
+    const Timeout = setTimeout(() => {
+      setNotify(true);
+      console.log("the time out ran");
+    }, 5000);
+    return () => clearTimeout(Timeout);
+  }, []);
+
+  console.log(notify);
+
   const width = BrowserWidth();
   return (
     <div className="bottom_nav_container">
@@ -25,16 +37,36 @@ const BottomNav = () => {
       </a>
 
       <Link to="/messages">
-        <div className="image_container">
+        <div
+          className="image_container"
+          style={{ position: "relative" }}
+          // onClick={() => setNotify(false)}
+        >
           <img
             src="https://cdn0.iconfinder.com/data/icons/apple-apps/100/Apple_Messages-512.png"
             alt=""
           />
+          {notify && (
+            <div
+              style={{
+                position: "absolute",
+                backgroundColor: "red",
+                top: -5,
+                right: 0,
+                width: 20,
+                height: 20,
+                borderRadius: "50%",
+                textAlign: "center",
+              }}
+            >
+              <p>1</p>
+            </div>
+          )}
         </div>
       </Link>
 
       <Link to="/about">
-        <div className="image_container">
+        <div className="image_container ">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Contacts_%28iOS%29.png"
             alt=""
@@ -48,7 +80,7 @@ const BottomNav = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <div className="image_container hide">
+            <div className="image_container">
               <img
                 src="https://upcdn.io/FW25bBB/image/content/app_logos/e71493b6-3fb2-4532-b850-bc45b937142c.webp?f=webp&w=1920&q=85&fit=shrink-cover"
                 style={{ borderRadius: 15 }}
@@ -56,7 +88,7 @@ const BottomNav = () => {
               />
             </div>
           </a>
-          <div className="image_container hide">
+          <div className="image_container">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Adobe_Acrobat_DC_logo_2020.svg/1200px-Adobe_Acrobat_DC_logo_2020.svg.png"
               alt=""
@@ -64,7 +96,7 @@ const BottomNav = () => {
           </div>
 
           <Link to="/projects">
-            <div className="image_container hide">
+            <div className="image_container">
               <img
                 src="https://www.apple.com/v/app-store/b/images/overview/icon_appstore__ev0z770zyxoy_large_2x.png"
                 alt=""
