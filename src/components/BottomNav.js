@@ -1,20 +1,8 @@
 import "./bottomnav.css";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { BrowserWidth } from "../components/constant/Width";
 
-const BottomNav = () => {
-  const [notify, setNotify] = useState(false);
-  useEffect(() => {
-    const Timeout = setTimeout(() => {
-      setNotify(true);
-      console.log("the time out ran");
-    }, 5000);
-    return () => clearTimeout(Timeout);
-  }, []);
-
-  console.log(notify);
-
+const BottomNav = ({ notify, handleClose }) => {
   const width = BrowserWidth();
   return (
     <div className="bottom_nav_container">
@@ -40,7 +28,7 @@ const BottomNav = () => {
         <div
           className="image_container"
           style={{ position: "relative" }}
-          // onClick={() => setNotify(false)}
+          onClick={handleClose}
         >
           <img
             src="https://cdn0.iconfinder.com/data/icons/apple-apps/100/Apple_Messages-512.png"

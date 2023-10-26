@@ -5,7 +5,7 @@ import MobileView from "./MobileView";
 import { BrowserHeight } from "./constant/Height";
 import BottomNav from "./BottomNav";
 
-const Body = () => {
+const Body = ({ notify, handleClose }) => {
   // Declared height to fix browser height issues on mobile browser
   const height = BrowserHeight();
   return (
@@ -17,15 +17,22 @@ const Body = () => {
         <img src="../images/02.jpg" alt="" />
       </div>
       <Header />
-      <img
+      {/* <img
         src="https://www.macworld.com/wp-content/uploads/2023/01/folder-icon-macos-1.png"
         alt=""
         width={100}
-      />
-
+      /> */}
+      <div className="madewith">
+        <p>Made with react</p>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1150px-React-icon.svg.png"
+          alt=""
+          width={20}
+        />
+      </div>
       <Weather />
       <MobileView />
-      <BottomNav />
+      <BottomNav notify={notify} handleClose={handleClose} />
     </div>
   );
 };
