@@ -6,14 +6,16 @@ const BottomNav = ({ notify, handleClose }) => {
   const width = BrowserWidth();
   return (
     <div className="bottom_nav_container">
-      <a href="tel:+234 8136080403">
-        <div className="image_container">
-          <img
-            src="https://i.pinimg.com/originals/84/4e/8c/844e8cd4ab26c82286238471f0e5a901.png"
-            alt=""
-          />
-        </div>
-      </a>
+      {width < 820 && (
+        <a href="tel:+234 8136080403">
+          <div className="image_container">
+            <img
+              src="https://i.pinimg.com/originals/84/4e/8c/844e8cd4ab26c82286238471f0e5a901.png"
+              alt=""
+            />
+          </div>
+        </a>
+      )}
 
       <a href="mailto:austinpaul606@gmail.com?subject=Hello from my portfolio">
         <div className="image_container">

@@ -6,10 +6,13 @@ import About from "./components/pages/About";
 import { useEffect, useState } from "react";
 import Preloader from "./components/Preloader";
 import Notification from "./components/Notification";
+import { SetisFalseTimeout } from "./components/constant/timeout";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
   const [notify, setNotify] = useState(false);
+  // const [isopen, setIsOpen] = useState();
+
+  const loading = SetisFalseTimeout();
 
   useEffect(() => {
     const Timeout = setTimeout(() => {
@@ -19,16 +22,9 @@ function App() {
   }, []);
   const handleClose = () => setNotify(false);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
-    return () => clearTimeout(timeout);
-  }, []);
-
   return (
     <div className="App">
-      {isLoading ? (
+      {loading ? (
         <Preloader />
       ) : (
         <>

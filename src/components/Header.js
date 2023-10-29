@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import WifiIcon from "@mui/icons-material/Wifi";
 import AppleIcon from "@mui/icons-material/Apple";
 import { day, dayInWords, month } from "./constant/DateTime";
+// import { day, dayInWords, month } from "./constant/DateTime";
 
 const Header = () => {
   return (

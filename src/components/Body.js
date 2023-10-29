@@ -17,11 +17,7 @@ const Body = ({ notify, handleClose }) => {
         <img src="../images/02.jpg" alt="" />
       </div>
       <Header />
-      {/* <img
-        src="https://www.macworld.com/wp-content/uploads/2023/01/folder-icon-macos-1.png"
-        alt=""
-        width={100}
-      /> */}
+
       <div className="madewith">
         <p>Made with react</p>
         <img
@@ -32,6 +28,7 @@ const Body = ({ notify, handleClose }) => {
       </div>
       <Weather />
       <MobileView />
+
       <BottomNav notify={notify} handleClose={handleClose} />
     </div>
   );

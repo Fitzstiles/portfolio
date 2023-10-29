@@ -254,14 +254,6 @@
     object-fit: cover;
 }
 
-@media screen and (min-width:820px) {
-    .mobile__view__container {
-        display: none;
-    }
-}
-
-/* made with stylings */
-
 .madewith {
     display: flex;
     align-items: center;
@@ -275,4 +267,14 @@
     bottom: 100px;
     left: 50%;
     transform: translate(-50%);
+}
+
+@media screen and (min-width:820px) {
+    .mobile__view__container {
+        display: none;
+    }
+
+    .madewith {
+        display: none;
+    }
 }
